@@ -1,0 +1,63 @@
+/* password visibility toggle */
+.password{
+    position: relative;
+}
+
+.password .icon{
+    position: absolute;
+    /* top: 2rem; */
+    right: 670px;
+    cursor: pointer;
+}
+
+.hide-indicator{
+    display: none;
+}
+
+.show-indicator{
+    display: block;
+    animation: slide-up 0.5s ease;
+}
+.form-container{
+    /* width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; */
+    animation: slide-up 0.5s ease;
+}
+
+@keyframes slide-up{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
+.pass-green{
+    color:green
+}
+
+.pass-red{
+    color:red
+}
+
+.btn-disabled{
+    position: relative;
+    cursor: not-allowed;
+}
+
+.btn-disabled::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: o;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,0.5);
+    z-index: 999;
+}
